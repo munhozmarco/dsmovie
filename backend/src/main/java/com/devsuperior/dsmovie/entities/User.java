@@ -18,9 +18,9 @@ public class User {
 	
 public User() {}
 
-public User(Long id, Long email) {
+public User(Long id, String email) {
 		this.id = id;
-	this.email = email;
+	    this.email = email;
 }
 
 public Long getId() {
@@ -31,11 +31,11 @@ public void setId(Long id) {
 	this.id = id;
 }
 
-public Long getEmail() {
+public String getEmail() {
 	return email;
 }
 
-public void setEmail(Long email) {
+public void setEmail(String email) {
 	this.email = email;
 }
 
