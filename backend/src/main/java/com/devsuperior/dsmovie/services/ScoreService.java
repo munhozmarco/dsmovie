@@ -1,5 +1,6 @@
 package com.devsuperior.dsmovie.services;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +25,7 @@ public class ScoreService {
 	private  UserRepository userRepository ;
 	
 	@Transactional
-	public MovieDTO saveScore (ScoreDTO dto) {
+	public MovieDTO saveScore(ScoreDTO dto) {
 		
 		User  user = userRepository.findByEmail(dto.getEmail());
 		
@@ -46,7 +47,7 @@ public class ScoreService {
 		    
 		    double sum = 0.0;
 			for (Score s : movie.getScores()) {
-				sum = sum +s.getValue();
+				sum = sum + s.getValue();
 			}
 			
 			double avg = sum / movie.getScores().size();
