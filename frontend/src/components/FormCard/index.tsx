@@ -48,6 +48,7 @@ const handleSubmit = (event:React.FormEvent<HTMLFormElement>) =>  {
     });
 
 }
+
   return (
     <div className="dsmovie-form-container">
       <img className="dsmovie-movie-card-image" src={movie?.image} alt={movie?.title} />
