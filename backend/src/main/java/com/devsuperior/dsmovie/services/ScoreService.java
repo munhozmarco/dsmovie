@@ -2,6 +2,7 @@ package com.devsuperior.dsmovie.services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.dsmovie.dto.MovieDTO;
@@ -13,6 +14,8 @@ import com.devsuperior.dsmovie.repositories.MovieRepository;
 import com.devsuperior.dsmovie.repositories.ScoreRepository;
 import com.devsuperior.dsmovie.repositories.UserRepository;
 
+@Service
+
 public class ScoreService {
 	
 	@Autowired
@@ -22,7 +25,7 @@ public class ScoreService {
 	private ScoreRepository scoreRepository ;
 	
 	@Autowired
-	private  UserRepository userRepository ;
+	private UserRepository  userRepository ;
 	
 	@Transactional
 	public MovieDTO saveScore(ScoreDTO dto) {
